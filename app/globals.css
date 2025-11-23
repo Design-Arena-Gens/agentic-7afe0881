@@ -1,0 +1,360 @@
+:root {
+  color-scheme: light;
+  background: #0f172a;
+  color: #e2e8f0;
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  background: radial-gradient(circle at top, rgba(99, 102, 241, 0.35), transparent 50%),
+    radial-gradient(circle at bottom left, rgba(14, 165, 233, 0.25), transparent 55%),
+    #0f172a;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.app-shell {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.app-header {
+  text-align: center;
+}
+
+.app-title {
+  margin: 0.35rem 0 0;
+  font-size: clamp(3rem, 6vw, 4.75rem);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.app-tagline {
+  margin: 0;
+  font-size: 1rem;
+  color: #38bdf8;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.app-main {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.app-footer {
+  text-align: center;
+  font-size: 0.95rem;
+  color: rgba(226, 232, 240, 0.75);
+  border-top: 1px solid rgba(148, 163, 184, 0.2);
+  padding-top: 1.5rem;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.hero {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.hero-eyebrow {
+  margin: 0;
+  font-size: 0.85rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: rgba(226, 232, 240, 0.6);
+}
+
+.hero-title {
+  margin: 0;
+  font-size: clamp(2.5rem, 5vw, 3.75rem);
+  line-height: 1.08;
+}
+
+.hero-highlight {
+  color: #fbbf24;
+  text-shadow: 0 0 20px rgba(251, 191, 36, 0.35);
+}
+
+.hero-description {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: rgba(226, 232, 240, 0.85);
+}
+
+.hero-card {
+  background: rgba(15, 23, 42, 0.65);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  display: grid;
+  gap: 0.5rem;
+  max-width: 360px;
+  box-shadow: 0 30px 60px -35px rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(8px);
+}
+
+.hero-card-label {
+  margin: 0;
+  color: #38bdf8;
+  font-size: 0.85rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+
+.hero-card-word {
+  margin: 0;
+  font-size: 2.75rem;
+  font-weight: 600;
+}
+
+.hero-card-pronunciation {
+  margin: 0;
+  color: rgba(226, 232, 240, 0.75);
+  font-style: italic;
+}
+
+.hero-card-tip {
+  margin: 0;
+  font-size: 0.95rem;
+  color: rgba(148, 163, 184, 0.85);
+}
+
+.greeting-showcase {
+  display: grid;
+  gap: 1.75rem;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.greeting-selector {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+
+.selector-button {
+  background: rgba(30, 41, 59, 0.55);
+  border: 2px solid transparent;
+  border-radius: 1rem;
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  cursor: pointer;
+  color: inherit;
+  transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+}
+
+.selector-button:hover,
+.selector-button:focus-visible {
+  transform: translateY(-3px);
+  background: rgba(45, 55, 72, 0.65);
+}
+
+.selector-button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.35);
+}
+
+.selector-button--active {
+  background: rgba(14, 165, 233, 0.18);
+  box-shadow: inset 0 0 0 1px currentColor;
+}
+
+.selector-language {
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.selector-native {
+  font-size: 0.85rem;
+  color: rgba(226, 232, 240, 0.7);
+}
+
+.greeting-details {
+  border-radius: 1.75rem;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  padding: 2rem;
+  background: rgba(15, 23, 42, 0.7);
+  display: grid;
+  gap: 1.5rem;
+  box-shadow: 0 20px 50px -25px rgba(15, 23, 42, 0.9);
+}
+
+.greeting-header {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.greeting-label {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  font-size: 0.8rem;
+  color: rgba(226, 232, 240, 0.6);
+}
+
+.greeting-word {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+}
+
+.greeting-pronunciation {
+  margin: 0;
+  color: rgba(226, 232, 240, 0.75);
+  font-size: 0.95rem;
+}
+
+.greeting-pronunciation span {
+  font-weight: 600;
+  color: rgba(250, 204, 21, 0.9);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.greeting-meta {
+  display: grid;
+  gap: 1rem;
+}
+
+.greeting-meta div {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.greeting-meta dt {
+  font-size: 0.8rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: rgba(203, 213, 225, 0.7);
+}
+
+.greeting-meta dd {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.greeting-fact {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(125, 211, 252, 0.95);
+}
+
+.insight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.insight-card {
+  background: rgba(30, 41, 59, 0.65);
+  border-radius: 1.25rem;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  padding: 1.75rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.insight-card h3 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.insight-card p {
+  margin: 0;
+  color: rgba(226, 232, 240, 0.8);
+  line-height: 1.6;
+}
+
+.tips-panel {
+  background: rgba(30, 64, 175, 0.4);
+  border-radius: 1.75rem;
+  padding: 2rem;
+  border: 1px solid rgba(129, 140, 248, 0.35);
+  box-shadow: 0 25px 55px -30px rgba(79, 70, 229, 0.5);
+}
+
+.tips-panel h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.tips-panel ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+}
+
+.tips-panel li {
+  display: grid;
+  gap: 0.35rem;
+  background: rgba(15, 23, 42, 0.55);
+  border-radius: 1rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+}
+
+.tips-panel strong {
+  font-size: 0.9rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(248, 250, 252, 0.85);
+}
+
+.tips-panel span {
+  font-size: 0.95rem;
+  color: rgba(226, 232, 240, 0.85);
+  line-height: 1.6;
+}
+
+@media (min-width: 920px) {
+  .greeting-showcase {
+    grid-template-columns: 320px minmax(0, 1fr);
+    align-items: stretch;
+  }
+
+  .greeting-selector {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .app-shell {
+    padding: 2rem 1.25rem;
+  }
+
+  .hero-card {
+    max-width: 100%;
+  }
+}
